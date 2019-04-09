@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' http://www.guidebookplus.com">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<script id="home-tpl" type="text/template">
+    <header class="bar bar-nav">
+        <h1 class="title">Directory</h1>
+    </header>
+    <div class="bar bar-standard bar-header-secondary">
+        <input class='search-key' type="search"/>
+    </div>
+    <div class="content"></div>
+</script>
+
+<script id="employee-list-tpl" type="text/template">
+    <ul class="table-view">
+        {{#each this}}
+        <li class="table-view-cell media">
+            <!-- <a href="jsonoperatorquerybyid.php?operatorid={{ OperatorID }}"> -->
+                <div class="media-body">
+<a href="#employees/{{ OperatorID }}">
+
+                <!--<div> -->
+                    <p>{{OperatorID}} : {{OperatorName}}</p>
+                    </a>
+                </div>
+            
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+<script id="operator-tpl" type="text/template">
+      <header class="bar bar-nav">
+          <a class="btn btn-link btn-nav pull-left" href="#">
+              <span class="icon icon-left-nav"></span>
+          </a>
+          <h1 class="title">Operator</h1>
+      </header>
+      <div class="content">
+          <div class="card">
+              <ul class="table-view">
+              {{#each this}}        
+                  <li class="table-view-cell media">
+                    
+                      <div class="media-body">
+                        <a href="#operatorshifts/{{ OperatorID }}">
+                          <p>{{ OperatorID }} : {{ OperatorName }}</p>
+                          </a>
+                      </div>
+                  </li>
+                  {{/each}}
+              </ul>
+          </div>
+      </div>
+  </script>    
+    <!-- the {{{#each this}} would appear to be necessary for me here even though only 1 result is possible by id -->
+
+    <!-- <a href="#operatorshifts/{{ OperatorID }}"> -->
+    <!-- </a> -->    
+    
+    <!--to show a list of all of an operator's shifts  -->
+    
+<script id="operator-shift-tpl" type="text/template">
+      <header class="bar bar-nav">
+          <a class="btn btn-link btn-nav pull-left" href="#">
+              <span class="icon icon-left-nav"></span>
+          </a>
+          <h1 class="title">This Operator's Shifts</h1>
+      </header>
+      <div class="content">
+          <div class="card">
+              <ul class="table-view">
+              {{#each this}}
+                  <li class="table-view-cell media">
+                    
+                      <div class="media-body">
+                      <a href="#shiftview/{{ShiftID}}">
+                            <p>{{ OperatorName }} </p>     
+                            <p>{{ ShiftID }} </p>     
+                          <p>{{ ProjectDescription }} </p>
+                          <p>{{ RigDescription }} </p>
+                          <p>{{ WorkTypeDescription }} </p>
+                          <p>{{ Product }} </p>
+                          <p>{{ StartDateTime }} </p>
+                          <p>{{ EndDateTime }} </p>
+                            <p>{{ WorkHours }} </p>
+                            </a>
+                      </div>
+                  </li>
+                  {{/each}}
+              </ul>
+          </div>
+      </div>
+  </script>    
+
+        <!-- the {{#each this}} would appear to be necessary for me here even though only 1 result is possible by id 
+<!-- may need explicit Table.Field in SELECT -->
+
+    
+<script id="shift-tpl" type="text/template">
+      <header class="bar bar-nav">
+          <a class="btn btn-link btn-nav pull-left" href="#">
+              <span class="icon icon-left-nav"></span>
+          </a>
+          <h1 class="title">View of a Shift</h1>
+      </header>
+      <div class="content">
+          <div class="card">
+              <ul class="table-view">
+              {{#each this}}
+                  <li class="table-view-cell media">
+                    
+                      <div class="media-body">
+                      <form>
+                        <p><input name="shiftid" type="text" value="{{ ShiftID }}"></input> </p>     
+<--                        
+                       <p><input name="projectdescription" type="text" value="{{ ProjectDescription }}"> </input> </p>
+                          <p><input name="rigdescription" type="text" value="{{ RigDescription }}"> </input> </p>
+                          <p><input name="worktypedescription" type="text" value="{{ WorkTypeDescription }}"></input> </p>     
+-->                          
+<select name='projectid'>
+    {{#select ProjectID}}
+    <option value="1">Dhofar ridge exploration</option>
+    <option value="2">Ras al Khaima piling test</option>
+    {{/select}}
+</select>
+<select name="rigid">
+    {{#select RigID}}
+    <option value="1">Big yellow SEP rig</option>
+    <option value="2">Tamrock jumbo 4 x drifter</option>
+    <option value="3">air leg</option>
+    <option value="4">diamond driller</option>
+    {{/select}}
+</select>
+<select name="worktypeid">
+    {{#select WorkTypeID}}
+    <option value="1">Drilling</option>
+    <option value="2">Mob / Demob / Move rig</option>
+    <option value="3">Weather</option>
+    <option value="4">Standby Fugro</option>
+    <option value="5">Standby client</option>
+    <option value="6">Grouting</option>
+    <option value="7">Pump test</option>    
+    {{/select}}
+</select>
+
+                          <p><input name="product" type="text" value="{{ Product }}"></input> </p>     
+                          <p><input name="startdatetime" type="text" value="{{ StartDateTime }}"></input> </p>     
+                          <p><input name="enddatetime" type="text" value="{{ EndDateTime }}"></input> </p>     
+                            <p><input name="workhours" type="text" value="{{ WorkHours }}"></input> </p>     
+                        </form>
+                      </div>
+                  </li>
+                  {{/each}}
+              </ul>
+          </div>
+      </div>
+  </script>    
+    
+    
+
+        <!-- the {{{#each this}} would appear to be necessary for me here even though only 1 result is possible by id 
+    <!-- need (a) drop-downs here (SELECT/OPTION) for project, rig, worktype (operator?) (b) drop-downs to be selected according to record's field's value (c) drop-downs to show name but have id value, (d) the values in these inputs/selects to be used in updating or creating a record (e) ideally this also to work for new/create/blank records -->
+    
+    <!-- maybe non-handlebars js to pass in SELECT/OPTION data? -->
+    
+<script src="cordova.js"></script>
+<script src="lib/fastclick.js"></script>
+<script src="lib/handlebars.js"></script>
+<script src="lib/jquery.js"></script>
+<script src="lib/router.js"></script>
+<script src="js/services/json/EmployeeService.js"></script>
+<script src="js/EmployeeListView.js"></script>
+<script src="js/EmployeeView.js"></script>    
+<script src="js/HomeView.js"></script>
+<script src="js/ShiftListView.js"></script>
+<script src="js/ShiftView.js"></script>        
+<script src="js/app.js"></script>
+
+</body>
+</html>

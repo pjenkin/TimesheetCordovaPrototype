@@ -1,0 +1,7 @@
+cordova build --release android makes a release apk (signed or unsigned), but
+cordova build android --release only yielded a debug apk
+
+C:\Users\peter\Documents\cordova\jsontry\jsontry>cordova build android --release -- --keystore="C:\\guidebookplus.keystore" --storePassword=password --alias=PJenkin
+where the password was "password" ...
+produced a 
+C:/Users/peter/Documents/cordova/jsontry/jsontry/platforms/android/build/outputs/apk/android-release-unsigned.apk
