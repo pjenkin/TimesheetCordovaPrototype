@@ -1,0 +1,1 @@
+edited to conenct to guidegaz_drilldowndb, user guidegaz_drilldb instead of guidegaz_fogrudemo

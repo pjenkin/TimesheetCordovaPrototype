@@ -1,0 +1,33 @@
+[29-Jul-2017 11:25:17 Europe/London] PHP Parse error:  syntax error, unexpected '}' in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 84
+[29-Jul-2017 11:33:38 Europe/London] PHP Parse error:  syntax error, unexpected '}' in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 13
+[29-Jul-2017 12:48:57 Europe/London] PHP Parse error:  syntax error, unexpected '}' in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 13
+[29-Jul-2017 12:50:31 Europe/London] PHP Fatal error:  Call to undefined function domxml_new_doc() in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 47
+[29-Jul-2017 13:06:32 Europe/London] PHP Fatal error:  Call to undefined function domxml_new_doc() in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 47
+[29-Jul-2017 13:13:58 Europe/London] PHP Fatal error:  Call to undefined function domxml_new_doc() in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 47
+[29-Jul-2017 13:14:08 Europe/London] PHP Fatal error:  Call to undefined function DOMDocument() in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 48
+[29-Jul-2017 13:15:52 Europe/London] PHP Fatal error:  Call to undefined method DOMDocument::create_element() in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 49
+[29-Jul-2017 13:20:20 Europe/London] PHP Fatal error:  Call to undefined method DOMDocument::dump_mem() in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 65
+[29-Jul-2017 13:20:53 Europe/London] PHP Fatal error:  Call to undefined method DOMDocument::dump_mem() in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 65
+[29-Jul-2017 19:44:16 Europe/London] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 61
+[29-Jul-2017 19:58:57 Europe/London] PHP Parse error:  syntax error, unexpected ';' in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 64
+[01-Aug-2017 09:55:01 Europe/London] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 128
+[01-Aug-2017 09:55:39 Europe/London] PHP Fatal error:  Call to undefined method mysqli_result::fetch_all() in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 128
+[01-Aug-2017 09:57:01 Europe/London] PHP Fatal error:  Call to undefined function fetch_all() in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 128
+[01-Aug-2017 09:57:49 Europe/London] PHP Fatal error:  Call to undefined function mysqli_fetch_all() in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 128
+[01-Aug-2017 10:00:18 Europe/London] PHP Parse error:  syntax error, unexpected T_ECHO in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 131
+[01-Aug-2017 10:01:11 Europe/London] PHP Parse error:  syntax error, unexpected T_ECHO in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 131
+[01-Aug-2017 10:01:14 Europe/London] PHP Parse error:  syntax error, unexpected T_ECHO in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 131
+[01-Aug-2017 10:01:34 Europe/London] PHP Parse error:  syntax error, unexpected T_ECHO in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 131
+[01-Aug-2017 10:23:27 Europe/London] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 160
+[01-Aug-2017 10:23:51 Europe/London] PHP Fatal error:  Call to undefined function json_last_error_msg() in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 137
+[01-Aug-2017 10:33:28 Europe/London] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 15
+[01-Aug-2017 10:37:24 Europe/London] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, object given in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 141
+[01-Aug-2017 10:55:31 Europe/London] PHP Parse error:  syntax error, unexpected '[' in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 163
+[01-Aug-2017 11:03:45 Europe/London] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 163
+[01-Aug-2017 11:04:42 Europe/London] PHP Parse error:  syntax error, unexpected '[' in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 163
+[01-Aug-2017 11:06:05 Europe/London] PHP Parse error:  syntax error, unexpected '[' in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 163
+[01-Aug-2017 11:06:07 Europe/London] PHP Parse error:  syntax error, unexpected '[' in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 163
+[01-Aug-2017 11:06:07 Europe/London] PHP Parse error:  syntax error, unexpected '[' in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 163
+[01-Aug-2017 15:42:48 Europe/London] PHP Parse error:  syntax error, unexpected T_STRING in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 139
+[01-Aug-2017 15:44:02 Europe/London] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 180
+[01-Aug-2017 21:08:33 Europe/London] PHP Parse error:  syntax error, unexpected '[' in /home/guidegaz/public_html/drilldowndb/json4queries.php on line 182

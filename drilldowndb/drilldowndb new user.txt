@@ -1,0 +1,12 @@
+guidegaz_drilldb
+1720demo
+all privileges to database guidegaz_drilldowndb
+
+(Which can be removed while still permitting functionality?)
+
+
+
+user guidegaz_drilldb added using "MySQL Databases" from CPanel 26/7/17
+
+PHP: 5.3
+MySQL: 5.6.36 

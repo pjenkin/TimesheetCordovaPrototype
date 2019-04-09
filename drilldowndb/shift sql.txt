@@ -1,0 +1,60 @@
+SELECT * from tblshift INNER JOIN tbloperator ON tblshift.OperatorID = tbloperator.OperatorID INNER JOIN tblproject ON tblproject.ProjectID = tblshift.ProjectID INNER JOIN tblseprig ON tblshift.RigID = tblseprig.RigID INNER JOIN tblworktype ON tblshift.WorkTypeID = tblworktype.WorkTypeID
+
+
+
+SELECT * from tblShift INNER JOIN tblOperator ON tblShift.OperatorID = tblOperator.OperatorID INNER JOIN tblProject ON tblProject.ProjectID = tblShift.ProjectID INNER JOIN tblRig ON tblShift.RigID = tblRig.RigID INNER JOIN tblWorkType ON tblShift.WorkTypeID = tblWorkType.WorkTypeID
+
+(Should WorkTypeID, OperatorID, ProjectID be removed from tblShift since their data are covered by the various relational tables (...Shift)?)
+
+SELECT tblOperator.OperatorName, tblWorkType.WorkTypeDescription,tblRig.RigDescription,tblShift.StartDateTime,tblShift.EndDateTime from tblShift INNER JOIN tblOperator ON tblShift.OperatorID = tblOperator.OperatorID INNER JOIN tblProject ON tblProject.ProjectID = tblShift.ProjectID INNER JOIN tblRig ON tblShift.RigID = tblRig.RigID INNER JOIN tblWorkType ON tblShift.WorkTypeID = tblWorkType.WorkTypeID
+
+(this is using tblShift fields too much? non relational?)
+
+SELECT tblOperator.OperatorName, tblWorkType.WorkTypeDescription,tblRig.RigDescription,tblShift.StartDateTime,tblShift.EndDateTime from tblShift INNER JOIN tblOperator ON tblShift.OperatorID = tblOperator.OperatorID INNER JOIN tblProject ON tblProject.ProjectID = tblShift.ProjectID INNER JOIN tblRig ON tblShift.RigID = tblRig.RigID INNER JOIN tblWorkType ON tblShift.WorkTypeID = tblWorkType.WorkTypeID
+
+SELECT tblOperator.OperatorName, tblWorkType.WorkTypeDescription,tblRig.RigDescription,tblShift.StartDateTime,tblShift.EndDateTime FROM tblShift INNER JOIN tblOperator ON tblShift.ShiftID = tblOperator.ShiftID INNER JOIN tblProject ON tblProject.ProjectID = tblShift.ProjectID INNER JOIN tblRig ON tblShift.RigID = tblRig.RigID INNER JOIN tblWorkType ON tblShift.WorkTypeID = tblWorkType.WorkTypeID
+
+
+tblShift INNER JOIN (tblOperatorShift INNER JOIN tblOperator ON tblOperator.OperatorID = tblOperatorShift.OperatorID) ON tblShift.ShiftID = tblOperatorShift.ShiftID
+
+----------
+SELECT tblShift.StartDateTime, tblOperator.OperatorName FROM
+tblShift INNER JOIN (tblOperatorShift INNER JOIN tblOperator ON tblOperator.OperatorID = tblOperatorShift.OperatorID) ON tblShift.ShiftID = tblOperatorShift.ShiftID
+------------ this dwork (i think) for listing all shifts
+
+to list all shifts with all operators with each shift's projects (or those without projects)
+
+
+
+SELECT tblShift.StartDateTime, tblOperator.OperatorName FROM
+tblShift INNER JOIN tblProject INNER JOIN (
+(tblOperatorShift INNER JOIN tblOperator ON tblOperator.OperatorID = tblOperatorShift.OperatorID) ON tblShift.ShiftID = tblOperatorShift.ShiftID) ON tblProject.ProjectID = tblProjectShift.ProjectID
+) ON tblShift.ShiftID = tblOperatorShift.ShiftID
+
+
+
+.....
+
+
+
+might need multiple queries!
+
+---
+
+1) SELECT tblShift.ShiftID, tblOperator.OperatorName FROM tblShift INNER JOIN (tblOperatorShift INNER JOIN tblOperator ON tblOperator.OperatorID = tblOperatorShift.OperatorID) ON tblShift.ShiftID = tblOperatorShift.ShiftID
+2)  SELECT tblShift.ShiftID, tblProject.ProjectDescription FROM tblShift INNER JOIN (tblProjectShift INNER JOIN tblProject ON tblProject.ProjectID = tblProjectShift.ProjectID) ON tblShift.ShiftID = tblProjectShift.ShiftID
+3) SELECT tblShift.ShiftID, tblRig.RigDescription FROM tblShift INNER JOIN (tblRigShift INNER JOIN tblRig ON tblRig.RigID = tblRigShift.RigID) ON tblShift.ShiftID = tblRigShift.ShiftID
+4) SELECT tblShift.ShiftID, tblWorkType.WorkTypeDescription FROM tblShift INNER JOIN (tblWorkTypeShift INNER JOIN tblWorkType ON tblWorkType.WorkTypeID = tblWorkTypeShift.WorkTypeID) ON tblShift.ShiftID = tblWorkTypeShift.ShiftID
+
+
+----
+
+RigID field in tblOperatorShift table?
+
+
+
+tblOperatorShift INNER JOIN tblOperator ON tblOperator.OperatorID = tblOperatorShift.OperatorID
+tblProjectShift INNER JOIN tblProject ON tblProject.ProjectID = tblProjectShift.ProjectID
+tblRigShift INNER JOIN tblRig ON tblRig.RigID = tblRigShift.RigID
+tblWorkTypeShift INNER JOIN tblWorkType ON tblWorkType.WorkTypeID = tblWorkTypeShift.WorkTypeID
+
