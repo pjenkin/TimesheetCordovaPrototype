@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "skwas-cordova-plugin-datetimepicker",
+        "scope": null,
+        "escapedName": "skwas-cordova-plugin-datetimepicker",
+        "name": "skwas-cordova-plugin-datetimepicker",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\peter\\Documents\\cordova\\jsontry\\jsontry\\node_modules"
+    ]
+  ],
+  "_from": "skwas-cordova-plugin-datetimepicker@latest",
+  "_id": "skwas-cordova-plugin-datetimepicker@1.0.0",
+  "_inCache": true,
+  "_location": "/skwas-cordova-plugin-datetimepicker",
+  "_nodeVersion": "6.2.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/skwas-cordova-plugin-datetimepicker-1.0.0.tgz_1497097826013_0.7880643873941153"
+  },
+  "_npmUser": {
+    "name": "skwas",
+    "email": "skwas@skwas.net"
+  },
+  "_npmVersion": "3.9.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "skwas-cordova-plugin-datetimepicker",
+    "scope": null,
+    "escapedName": "skwas-cordova-plugin-datetimepicker",
+    "name": "skwas-cordova-plugin-datetimepicker",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/skwas-cordova-plugin-datetimepicker/-/skwas-cordova-plugin-datetimepicker-1.0.0.tgz",
+  "_shasum": "2d3b08c17c06ebfa520cab356df2b8b39591fd5d",
+  "_shrinkwrap": null,
+  "_spec": "skwas-cordova-plugin-datetimepicker",
+  "_where": "C:\\Users\\peter\\Documents\\cordova\\jsontry\\jsontry\\node_modules",
+  "author": {
+    "name": "skwasjer"
+  },
+  "bugs": {
+    "url": "https://github.com/skwasjer/skwas-cordova-plugin-datetimepicker/issues"
+  },
+  "contributors": [
+    {
+      "name": "turshija"
+    },
+    {
+      "name": "emanfu"
+    }
+  ],
+  "cordova_name": "DateTime picker",
+  "dependencies": {},
+  "description": "Cordova DateTime picker plugin",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "2d3b08c17c06ebfa520cab356df2b8b39591fd5d",
+    "tarball": "https://registry.npmjs.org/skwas-cordova-plugin-datetimepicker/-/skwas-cordova-plugin-datetimepicker-1.0.0.tgz"
+  },
+  "engines": [],
+  "gitHead": "36a3fdba1593230e0bb6db3db0002c9f4c1f8391",
+  "homepage": "https://github.com/skwasjer/skwas-cordova-plugin-datetimepicker#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova",
+    "datetime"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "skwas",
+      "email": "skwas@skwas.net"
+    }
+  ],
+  "name": "skwas-cordova-plugin-datetimepicker",
+  "optionalDependencies": {},
+  "platforms": [
+    "android",
+    "ios"
+  ],
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skwasjer/skwas-cordova-plugin-datetimepicker.git"
+  },
+  "scripts": {},
+  "version": "1.0.0"
+}

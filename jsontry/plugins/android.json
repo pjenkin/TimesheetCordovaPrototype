@@ -1,0 +1,27 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.guidebookplus.jsontry"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.guidebookplus.jsontry"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.guidebookplus.jsontry"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.guidebookplus.jsontry"
+        },
+        "skwas-cordova-plugin-datetimepicker": {
+            "PACKAGE_NAME": "com.guidebookplus.jsontry"
+        }
+    },
+    "dependent_plugins": {}
+}

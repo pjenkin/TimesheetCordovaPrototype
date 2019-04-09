@@ -1,0 +1,11 @@
+{
+ "android": {
+     "release": {
+         "keystore":"c:\\guidebookplus.keystore",
+         "storePassword":"password",
+         "alias":"PJenkin",
+         "password":"password",
+         "keystoreType":""
+       }
+   }
+}
