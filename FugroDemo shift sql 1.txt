@@ -1,0 +1,1 @@
+SELECT * from tblshift INNER JOIN tbldriller ON tblshift.DrillerID = tbldriller.DrillerID INNER JOIN tblproject ON tblproject.ProjectID = tblshift.ProjectID INNER JOIN tblseprig ON tblshift.SEPRigID = tblseprig.SEPRigID INNER JOIN tblworktype ON tblshift.WorkTypeID = tblworktype.WorkTypeID
